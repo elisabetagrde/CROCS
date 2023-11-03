@@ -1,0 +1,276 @@
+*{
+  box-sizing: border-box;
+}
+
+body{
+  background-color: #0e0e0e;
+}
+
+nav{
+  width: 100%;
+  height: 50px;
+  position: fixed;
+  background: #0e0e0e;
+  z-index: 101;
+  margin: -100px 0 0 -8px;
+}
+
+#trigger{
+  position: absolute;
+  top: 850px;
+  width: 5px;
+  height: 1px;
+  border: 1px #0e0e0e solid; /*change color to red to see trigger point*/
+  z-index: 99;
+}
+
+/* shoelace component 1 */
+sl-icon-button{
+  font-size: 30px;
+  margin: 5px 20px 0 0;
+  color: #fefefe;
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+sl-icon-button::part(base):hover{
+  color: #5e5e5e;
+}
+
+/* shoelace component 2 */
+sl-drawer::part(title){
+  font-family: scotch-display, sans-serif;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+sl-drawer::part(body){
+  font-family: scotch-display, sans-serif;
+  font-weight: 500;
+}
+
+sl-drawer::part(overlay){
+  background-color: #0e0e0e80;
+  filter: blur(10px);
+}
+
+sl-drawer::part(close-button):hover{
+  color: #5e5e5e;
+}
+
+sl-drawer p{
+  cursor: default;
+}
+
+sl-drawer p:hover:after{
+  content: " - COMING SOON!";
+}
+
+#hero{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  width: 100%;
+  height: 550px;
+  position: relative;
+  margin-top: 100px;
+}
+
+/* CSS animation */
+#animated-croc{
+  position: absolute;
+  width: auto;
+  height: 750px;
+  animation: animatedCroc 20s linear infinite;
+  top: -130px;
+}
+
+@keyframes animatedCroc{
+  0% {
+      left: -1000px;
+  }
+  100% {
+      left: 100%;
+  }
+}
+
+/* SVG animation */
+#crocs-logo{
+  fill: #fefefe;
+  position: absolute;
+  top: 170px;
+  bottom: 50px;
+  z-index: 100;
+  -webkit-text-fill-color: transparent;
+  pointer-events: none;
+  animation: fade ease-in 3s;
+  width: auto;
+}
+
+@keyframes fade {
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+
+}
+
+#brands-container{
+  color: #fefefe35;
+  width: 95%;
+  height: 50px;
+  text-align: center;
+  font-size: 45px;
+  font-family: scotch-display, sans-serif;
+  font-weight: 500;
+  font-style: italic;
+  display: flex;
+  justify-content: space-between;
+  z-index: 100;
+  padding-top: 30%;
+}
+
+.brands-text:hover{
+  color: #fefefe;
+  font-style: normal;
+  cursor: pointer;
+}
+
+.details-group-example sl-details:not(:last-of-type){
+  margin-bottom: var(--sl-spacing-2x-small);
+}
+
+.details-group-example{
+  width: 600px;
+  margin: 3% 0 10% 20%;
+}
+
+#benefits{
+  font-family: scotch-display, sans-serif;
+  letter-spacing: 1.5px;
+  color: #fefefe;
+  margin: 25% 0 12% 10%;
+  font-weight: 500;
+  font-size: 30px;
+}
+
+/* shoelace component 3 */
+sl-details::part(base) {
+  background: #0e0e0e;
+  color: #fefefe;
+  font-family: scotch-display, sans-serif;
+  letter-spacing: 1px;
+}
+
+sl-details::part(header) {
+    font-weight: 600;
+}
+
+#shop{
+  font-family: scotch-display, sans-serif;
+  letter-spacing: 1.5px;
+  color: #fefefe;
+  margin: 22% 0 15% 10%;
+  font-weight: 500;
+  font-size: 30px;
+}
+
+/* shoelace component 4*/
+sl-carousel{
+  margin: 0 0 15% 0;
+}
+
+sl-carousel::part(navigation-button){
+  margin: 0 100px 0 100px;
+  color: #fefefe
+}
+
+sl-carousel::part(navigation-button):hover{
+  color: #5e5e5e
+}
+
+sl-carousel::part(scroll-container){
+  width: 70%;
+  margin: 0 0 5% 15%;
+}
+
+sl-carousel::part(pagination-item){
+  background-color: #fefefe
+}
+
+sl-carousel::part(pagination-item--active){
+  border: 3px #0e0e0e solid;
+}
+
+footer{
+  position: relative;
+  height: 100px;
+  color: #aeaeae;
+  font-family: scotch-display, sans-serif;
+  font-size: 18px;
+}
+
+.info span{
+  font-weight: 700;
+}
+
+.info p{
+  font-weight: 500;
+}
+
+#infobox{
+  position: absolute;
+  left: 15%;
+  display: flex;
+  width: 750px;
+  justify-content: space-between;
+  text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+  
+nav{
+  margin: -250px 0 0 -8px;
+}
+#hero{
+  margin-top: 250px;
+  height: auto;
+}
+
+#brands-container{
+  width: 95%;
+  font-size: 35px;
+  margin-top: 50%;
+}
+  
+#benefits{
+  margin: 35% 0 12% 10%;
+}
+
+.details-group-example{
+  width: 500px;
+  margin: 25% 0 10% 18%;
+  font-size: 20px;
+}
+
+#shop{
+  margin: 40% 0 35% 10%;
+}
+
+sl-carousel::part(scroll-container){
+  width: 100%;
+  margin: 0 0 10% 0%;
+}
+
+sl-carousel{
+  margin: 0 0 35% 0;
+}
+
+#infobox{
+  width: 550px;
+}
+
+}
