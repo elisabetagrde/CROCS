@@ -14,23 +14,23 @@ let crocsImage = document.querySelector('#animated-croc');
 
 // listening for user click to change image
 megaBtn.addEventListener('click', function(){
-  crocsImage.setAttribute('src', 'images/MEGA.png');
+  crocsImage.setAttribute('src', 'MEGA.png');
 });
 
 hikerBtn.addEventListener('click', function(){
-  crocsImage.setAttribute('src', 'images/HIKER.png');
+  crocsImage.setAttribute('src', 'HIKER.png');
 });
 
 classicBtn.addEventListener('click', function(){
-  crocsImage.setAttribute('src', 'images/CLASSIC.png');
+  crocsImage.setAttribute('src', 'CLASSIC.png');
 });
 
 sirenBtn.addEventListener('click', function(){
-  crocsImage.setAttribute('src', 'images/SIREN.png');
+  crocsImage.setAttribute('src', 'SIREN.png');
 });
 
 chainBtn.addEventListener('click', function(){
-  crocsImage.setAttribute('src', 'images/CHAIN.png');
+  crocsImage.setAttribute('src', 'CHAIN.png');
 });
 
 
